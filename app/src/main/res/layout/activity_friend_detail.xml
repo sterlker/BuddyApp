@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FriendDetailActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Detail"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:id="@+id/fImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher" />
+
+    <EditText
+        android:id="@+id/fName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/fMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:textSize="20sp"
+        android:inputType="phone"/>
+
+    <Spinner
+        android:id="@+id/fGender"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:entries="@array/gender_options" />
+
+
+    <EditText
+        android:id="@+id/fEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-Mail"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/fDob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of Birth"
+        android:textSize="20sp"
+        android:onClick="datePickerDialog"
+        android:focusable="false"/>
+
+    <EditText
+        android:id="@+id/fAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/editF_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:textSize="35sp"
+            android:onClick="saveFriend"/>
+
+        <Button
+            android:id="@+id/deleteF_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete"
+            android:textSize="35sp"
+            android:onClick="deleteFriend"/>
+    </LinearLayout>
+
+</LinearLayout>
