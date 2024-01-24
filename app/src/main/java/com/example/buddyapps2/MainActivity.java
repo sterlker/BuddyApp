@@ -1,5 +1,5 @@
 package com.example.buddyapps2;
-
+// COMMIT AND PUSH TRY
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if (savedInstanceState == null) {
-//            FriendsFragment friendsFragment = new FriendsFragment();
-//            friendsFragment.loadFromDBToMemory();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new FriendsFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_friends);
@@ -51,8 +49,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int itemID = item.getItemId();
 
         if (itemID == R.id.nav_friends) {
-//            FriendsFragment friendsFragment = new FriendsFragment();
-//            friendsFragment.loadFromDBToMemory();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new FriendsFragment()).commit();
             Toast.makeText(this, "My Friends", Toast.LENGTH_SHORT).show();
